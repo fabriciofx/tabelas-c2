@@ -2,9 +2,8 @@ name: Build and Deploy LaTeX Project
 permissions: write-all
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    tags:
+      - '*'
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -30,5 +29,4 @@ jobs:
       - name: Publish PDF
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: current
           files: tabelas.pdf

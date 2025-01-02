@@ -1,0 +1,117 @@
+% Documento tipo artigo, com fonte tamanho 12
+\documentclass[12pt]{article}
+
+% Configura o tamanho do papel e das margens
+\usepackage[
+    a4paper,% papel A4
+    left=0.5cm,% margem esquerda
+    right=0.5cm,% margem direita
+    top=0.5cm,% margem superior
+    bottom=0.5cm, % margem inferior
+    includehead,
+    headheight=6mm
+]{geometry}
+
+% Cabeçalho e rodapé
+\usepackage{fancyhdr}
+
+% Caracteres / Acentos / Português do Brasil
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+% Símbolos matemáticos
+\usepackage{amsfonts}
+
+% Cria uma caixa de ajuste de tamanho para as tabelas
+\usepackage{adjustbox}
+
+% Numera automaticamente cada linha da tabela
+\usepackage{tabularray}
+
+% Permite o uso de cores por nome
+\usepackage{xcolor}
+
+% Aumenta o padding da celula da tabela
+\renewcommand{\arraystretch}{2.2}
+
+% Começo do documento
+\begin{document}
+
+% Inclui os cabeçalhos e rodapé no documento
+\pagestyle{fancy}
+
+% Configura o cabeçalho
+\fancyhead{} % Limpa todos os campos do cabeçalho
+\fancyhead[R]{\textbf{Fabrício Barros Cabral}} % Configura o campo right para o texto
+
+\section{TABELA DE DERIVADAS E INTEGRAIS}
+
+\begin{table}[htb]
+    \centering
+    \begin{adjustbox}{width=0.8\textwidth}
+        \begin{tblr}{
+            colspec=|l|l|l|l|,
+            row{even}={gray9}
+        }
+        \hline
+        \textbf{No} & \textbf{Função} & \textbf{Derivada} & \textbf{Integral Indefinida} \\ \hline
+        \arabic{rownum} & \textit{$f(x) = k$} & \textit{$f'(x) = 0$} & $\displaystyle\int{k\ dx} = k\int{dx} = kx + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = x$} & \textit{$f'(x) = 1$} & $\displaystyle\int{1\ dx} = 1\int{dx} = \int{dx} = x + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = ax$} & \textit{$f'(x) = a$} & $\displaystyle\int{a\ dx} = a\int{dx} = \int{dx} = ax + c$ \\ \hline
+        \arabic{rownum} & \textit{f(x) = $x^n$} & \textit{$f'(x) = n \cdot x^{n - 1}$} & $\displaystyle\int{x^ndx} = \frac{x^{n+1}}{n + 1} + c, n \neq -1$ \\ \hline
+        \arabic{rownum} & \textit{f(x) = $log_a\ x$} & \textit{$f'(x) = \displaystyle\frac{1}{x \cdot ln\ a}$} & $\displaystyle\int{\frac{1}{x \cdot ln\ a}dx} = log_a\ x + c$ \\ \hline
+        \arabic{rownum} & \textit{f(x) = $ln\ x$} & \textit{$f'(x) = \displaystyle\frac{1}{x}$} & $\displaystyle\int{\frac{1}{x}dx} = ln \left|x\right| + c$ \\ \hline
+        \arabic{rownum} & \textit{f(x) = $a^x$} & \textit{$f'(x) = a^x \cdot ln\ a$} & $\displaystyle\int{a^xdx} = \frac{a^x}{ln\ a} + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = {\rm e}^x$} & \textit{$f'(x) = {\rm e}^x$} & $\displaystyle\int{{\rm e}^xdx} = {\rm e}^x + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = sen(x)$} & \textit{$f'(x) = cos(x)$} & $\displaystyle\int{cos(x)dx} = sen(x) + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = cos(x)$} & \textit{$f'(x) = -sen(x)$} & $\displaystyle\int{sen(x)dx} = -cos(x) + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = tg(x)$} & \textit{$f'(x) = sec^2(x)$} & $\displaystyle\int{sec^2(x)dx} = tg(x) + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = cotg(x)$} & \textit{$f'(x) = -cossec^2(x)$} & $\displaystyle\int{cossec^2(x)dx} = -cotg(x) + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = sec(x)$} & \textit{$f'(x) = tg(x) \cdot sec(x)$} & $\displaystyle\int{sec(x) \cdot tg(x)dx} = sec(x) + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = cossec(x)$} & \textit{$f'(x) = -cotg(x) \cdot cossec(x)$} & $\displaystyle\int{cossec(x) \cdot cotg(x)dx} = -cossec(x) + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = arctg(x)$} & \textit{$f'(x) = \displaystyle\frac{1}{1 + x^2}$} & $\displaystyle\int{\frac{1}{1 + x^2}dx} = arctg(x) + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = arcsen(x)$} & \textit{$f'(x) = \displaystyle\frac{1}{\sqrt{1 - x^2}}$} & $\displaystyle\int{\frac{1}{\sqrt{1 - x^2}}dx} = arcsen(x) + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = arccos(x)$} & \textit{$f'(x) = \displaystyle - \frac{1}{\sqrt{1 - x^2}}$} & $\displaystyle\int{- \frac{1}{\sqrt{1 - x^2}}dx} = arccos(x) + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = ln(x + \sqrt{x^2 + 1})$} & \textit{$f'(x) = \displaystyle \frac{1}{\sqrt{1 + x^2}}$} & $\displaystyle\int{\frac{1}{\sqrt{1 + x^2}}dx} = ln\left|x + \sqrt{x^2 + 1}\right| + c$ \\ \hline
+        \arabic{rownum} & \textit{$f(x) = \displaystyle\frac{1}{2} \cdot ln\left|\frac{1 + x}{1 - x}\right|$} & \textit{$f'(x) = \displaystyle\frac{1}{1 - x^2}$} & $\displaystyle\int{\frac{1}{\sqrt{1 - x^2}}dx} = \displaystyle\frac{1}{2} \cdot ln\left|\frac{1 + x}{1 - x}\right| + c$ \\ \hline
+        \end{tblr}
+    \end{adjustbox}
+\end{table}    
+
+\section{REGRAS DE DERIVAÇÃO}
+
+\subsection{Regra do produto}
+Se $f(x) = g(x) \cdot h(x)$, então $f'(x) = g'(x) \cdot h(x) + g(x) \cdot h'(x)$
+
+\subsection{Regra do quociente}
+Se $f(x) = \displaystyle\frac{g(x)}{h(x)}$, então $f'(x) = \displaystyle\frac{g'(x) \cdot h(x) - g(x) \cdot h'(x)}{[h(x)^2]}$
+
+\subsection{Regra da cadeia}
+Se $f(x) = g[h(x)]$, então $f'(x) = g'[h(x)] \cdot h'(x)$
+
+\subsection{Regra de L'Hôspital}
+Se $\lim\limits_{x \to a} f(x) = \lim\limits_{x \to a} g(x) = 0$ ou $\lim\limits_{x \to a} f(x) = \lim\limits_{x \to a} g(x) = \infty$,
+então se $\lim\limits_{x \to a} \displaystyle\frac{f'(x)}{g'(x)} = k$, com $k \in \mathbb{R}$ ou $k = +\infty$ ou $k = -\infty:$
+$\lim\limits_{x \to a} \displaystyle\frac{f(x)}{g(x)} = \lim\limits_{x \to a} \displaystyle\frac{f'(x)}{g'(x)}$, com
+$a = c, a = c^+, a = c^-, a = +\infty$ ou $a = -\infty.$
+
+\section{REGRAS DE INTEGRAÇÃO}
+
+\subsection{Integração por substituição}
+
+Se $\displaystyle\int{f[g(x)] \cdot g'(x)dx}$, faça $u = g(x)$ e $u' = g'(x)$ e assim, teremos:
+$\displaystyle\int{f[g(x)] \cdot g'(x)dx} = \displaystyle\int{f(u)du} = F(u) + c$
+
+
+\subsection{Integração por partes}
+
+$\displaystyle\int{f(x) \cdot g'(x)dx} = f(x) \cdot g(x) - \displaystyle\int{f'(x) \cdot g(x)dx}$ ou, simplesmente,
+$\displaystyle\int{udv} = uv - \displaystyle\int{vdu}$\\[4mm]
+\textbf{Exemplo:}\\[2mm]
+$\displaystyle\int{xsen(x)dx}$\\[2mm]
+Fazendo $u = x$, então $du = dx$. Fazendo $dv = sen(x)$, então $v = -cos(x)$. Assim,\\[2mm]
+$\displaystyle\int{xsen(x)dx} = x \cdot -cos(x) - \left(\displaystyle\int{-cos(x)dx}\right) = -xcos(x) + \left(\displaystyle\int{cos(x)dx}\right) = -xcos(x) + sen(x) + c$
+
+\end{document}
+

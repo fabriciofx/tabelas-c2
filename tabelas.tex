@@ -73,7 +73,7 @@
             colspec=|l|l|l|l|,
             row{1}={font=\bfseries},
             row{even}={gray9},
-            cell{2-Z}{1} = {cmd=\the\numexpr\arabic{rownum}-1)}
+            cell{2-Z}{1} = {cmd=\inteval{\value{rownum}-1)}}
         }
         \hline
         No & Função & Derivada & Integral Indefinida \\ \hline

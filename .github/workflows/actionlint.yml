@@ -21,7 +21,7 @@
 # SOFTWARE.
 ---
 name: actionlint
-on:
+'on':
   push:
     branches:
       - main

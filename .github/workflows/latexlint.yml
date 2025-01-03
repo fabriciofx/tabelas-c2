@@ -21,7 +21,7 @@
 # SOFTWARE.
 ---
 name: latexlint
-on:
+'on':
   push:
     branches:
       - main

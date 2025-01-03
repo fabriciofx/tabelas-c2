@@ -23,7 +23,7 @@
 name: Release LaTeX Project
 permissions:
   contents: read
-on:
+'on':
   push:
     tags:
       - '*'

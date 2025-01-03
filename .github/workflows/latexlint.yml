@@ -41,6 +41,4 @@ jobs:
         uses: xu-cheng/texlive-action@v2
         with:
           scheme: full
-          run: |
-            tlmgr install lacheck
-            make lint
+          run: make lint

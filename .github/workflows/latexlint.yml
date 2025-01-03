@@ -39,8 +39,8 @@ jobs:
 
       - name: Lint LaTeX document
         uses: xu-cheng/texlive-action@v2
-          with:
-            scheme: full
-            run: |
-              tlmgr install lacheck
-              make lint
+        with:
+          scheme: full
+          run: |
+            tlmgr install lacheck
+            make lint

@@ -35,12 +35,12 @@ jobs:
     steps:
       # Checkout repository
       - name: Checkout Git repository
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Lint LaTeX document
-      - uses: xu-cheng/texlive-action@v2
-        with:
-          scheme: full
-          run: |
-            tlmgr install lacheck
-            make lint
+        uses: xu-cheng/texlive-action@v2
+          with:
+            scheme: full
+            run: |
+              tlmgr install lacheck
+              make lint

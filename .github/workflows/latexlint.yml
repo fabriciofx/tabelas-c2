@@ -1,0 +1,21 @@
+name: latexlint
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  latexlint:
+    name: LaTeX Lint
+    runs-on: ubuntu-24.04
+    steps:
+      # Checkout repository
+      - name: Checkout Git repository
+        uses: actions/checkout@v4
+
+      - name: Lint LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          cmd: make lint

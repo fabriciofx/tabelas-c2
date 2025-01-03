@@ -1,12 +1,14 @@
-name: Build and Deploy LaTeX Project
-permissions: write-all
+name: Release LaTeX Project
+permissions:
+  contents: read
 on:
   push:
     tags:
       - '*'
 jobs:
-  build_latex:
-    runs-on: ubuntu-latest
+  build:
+    name: Build Document
+    runs-on: ubuntu-24.04
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Set up Git repository
@@ -24,9 +26,22 @@ jobs:
         with:
           name: PDF
           path: tabelas.pdf
-      
+          if-no-files-found: error
+  
+  release:
+    name: Release on GitHub
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          files: tabelas.pdf
+        
       # Publishes the PDF as a release
-      - name: Publish PDF
+      - name: Make release
         uses: softprops/action-gh-release@v2
         with:
           files: tabelas.pdf

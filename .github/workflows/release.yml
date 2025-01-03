@@ -21,8 +21,7 @@
 # SOFTWARE.
 ---
 name: Release LaTeX Project
-permissions:
-  contents: read
+permissions: write-all
 'on':
   push:
     tags:
@@ -42,6 +41,11 @@ jobs:
         with:
           root_file: tabelas.tex
 
+  release:
+    name: Release on GitHub
+    needs: build
+    runs-on: ubuntu-24.04
+    steps:
       # Uploads the PDF
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
@@ -49,16 +53,6 @@ jobs:
           name: PDF
           path: tabelas.pdf
           if-no-files-found: error
-
-  release:
-    name: Release on GitHub
-    needs: build
-    runs-on: ubuntu-24.04
-    permissions:
-      contents: write
-    steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
 
       # Publishes the PDF as a release
       - name: Make release

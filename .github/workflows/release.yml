@@ -19,7 +19,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-
+---
 name: Release LaTeX Project
 permissions:
   contents: read
@@ -32,7 +32,7 @@ jobs:
     name: Build Document
     runs-on: ubuntu-24.04
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checks-out your repository
       - name: Set up Git repository
         uses: actions/checkout@v4
 
@@ -41,7 +41,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: tabelas.tex
-      
+
       # Uploads the PDF
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
@@ -49,7 +49,7 @@ jobs:
           name: PDF
           path: tabelas.pdf
           if-no-files-found: error
-  
+
   release:
     name: Release on GitHub
     needs: build
@@ -59,7 +59,7 @@ jobs:
     steps:
       - name: Download artifacts
         uses: actions/download-artifact@v4
-        
+
       # Publishes the PDF as a release
       - name: Make release
         uses: softprops/action-gh-release@v2

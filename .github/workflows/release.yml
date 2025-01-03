@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 ---
-name: Release LaTeX Project
+name: Build and Release LaTeX Document
 permissions: write-all
 'on':
   push:
@@ -28,7 +28,7 @@ permissions: write-all
       - '*'
 jobs:
   build:
-    name: Build Document
+    name: build-and-release
     runs-on: ubuntu-24.04
     steps:
       # Checks-out your repository
@@ -41,18 +41,12 @@ jobs:
         with:
           root_file: tabelas.tex
 
-  release:
-    name: Release on GitHub
-    needs: build
-    runs-on: ubuntu-24.04
-    steps:
       # Uploads the PDF
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
           name: PDF
           path: tabelas.pdf
-          if-no-files-found: error
 
       # Publishes the PDF as a release
       - name: Make release

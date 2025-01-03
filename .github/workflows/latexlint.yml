@@ -30,7 +30,7 @@ name: latexlint
       - main
 jobs:
   latexlint:
-    name: LaTeX Lint
+    name: latexlint
     runs-on: ubuntu-24.04
     steps:
       # Checkout repository

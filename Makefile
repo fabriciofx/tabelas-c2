@@ -24,7 +24,7 @@ RM = rm -f
 BUILD = pdflatex
 BIB = bibtex
 LINT = lacheck
-BUIL_OPTS := -file-line-error -halt-on-error -interaction=nonstopmode -recorder
+BUILD_OPTS := -file-line-error -halt-on-error -interaction=nonstopmode -recorder
 
 .PHONY: all build lint clean show
 

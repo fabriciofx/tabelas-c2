@@ -61,8 +61,10 @@
 \pagestyle{fancy}
 
 % Configura o cabeçalho
-\fancyhead{} % Limpa todos os campos do cabeçalho
-\fancyhead[R]{\textbf{Fabrício Barros Cabral}} % Configura o campo right para o texto
+% Limpa todos os campos do cabeçalho
+\fancyhead{}
+ % Configura o campo right para o texto
+\fancyhead[R]{\textbf{Fabrício Barros Cabral}}
 
 \section{TABELA DE DERIVADAS E INTEGRAIS}
 
@@ -107,7 +109,8 @@
 Se $f(x) = g(x) \cdot h(x)$, então $f'(x) = g'(x) \cdot h(x) + g(x) \cdot h'(x)$
 
 \subsection{Regra do quociente}
-Se $f(x) = \displaystyle\frac{g(x)}{h(x)}$, então $f'(x) = \displaystyle\frac{g'(x) \cdot h(x) - g(x) \cdot h'(x)}{[h(x)^2]}$
+Se $f(x) = \displaystyle\frac{g(x)}{h(x)}$, então
+$f'(x) = \displaystyle\frac{g'(x) \cdot h(x) - g(x) \cdot h'(x)}{[h(x)^2]}$
 
 \subsection{Regra da cadeia}
 Se $f(x) = g[h(x)]$, então $f'(x) = g'[h(x)] \cdot h'(x)$
@@ -117,17 +120,22 @@ Se $f(x) = g[h(x)]$, então $f'(x) = g'[h(x)] \cdot h'(x)$
 
 \subsection{Integração por substituição}
 
-Se $\displaystyle\int{f[g(x)] \cdot g'(x)dx}$, faça $u = g(x)$ e $u' = g'(x)$ e assim, teremos:
-$\displaystyle\int{f[g(x)] \cdot g'(x)dx} = \displaystyle\int{f(u)du} = F(u) + c$
+Se $\displaystyle\int{f[g(x)] \cdot g'(x)dx}$, faça $u = g(x)$ e $u' = g'(x)$ e
+assim, teremos: $\displaystyle\int{f[g(x)] \cdot g'(x)dx} =
+\displaystyle\int{f(u)du} = F(u) + c$
 
 
 \subsection{Integração por partes}
 
-$\displaystyle\int{f(x) \cdot g'(x)dx} = f(x) \cdot g(x) - \displaystyle\int{f'(x) \cdot g(x)dx}$ ou, simplesmente,
+$\displaystyle\int{f(x) \cdot g'(x)dx} =
+f(x) \cdot g(x) - \displaystyle\int{f'(x) \cdot g(x)dx}$ ou, simplesmente,
 $\displaystyle\int{udv} = uv - \displaystyle\int{vdu}$\\[4mm]
 \textbf{Exemplo:}\\[2mm]
 $\displaystyle\int{xsen(x)dx}$\\[2mm]
-Fazendo $u = x$, então $du = dx$. Fazendo $dv = sen(x)$, então $v = -cos(x)$. Assim,\\[2mm]
-$\displaystyle\int{xsen(x)dx} = x \cdot -cos(x) - \left(\displaystyle\int{-cos(x)dx}\right) = -xcos(x) + \left(\displaystyle\int{cos(x)dx}\right) = -xcos(x) + sen(x) + c$
+Fazendo $u = x$, então $du = dx$. Fazendo $dv = sen(x)$, então $v = -cos(x)$.
+Assim,\\[2mm]
+$\displaystyle\int{xsen(x)dx} = x \cdot -cos(x) -
+\left(\displaystyle\int{-cos(x)dx}\right) = -xcos(x) +
+\left(\displaystyle\int{cos(x)dx}\right) = -xcos(x) + sen(x) + c$
 
 \end{document}

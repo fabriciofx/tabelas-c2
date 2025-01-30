@@ -11,4 +11,5 @@ target/
 *.run.xml
 *.blg
 *.synctex.gz
+*.bak?
 tabelas.pdf

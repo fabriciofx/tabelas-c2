@@ -122,7 +122,16 @@ Se $f(x) = g[h(x)]$, então $f'(x) = g'[h(x)] \cdot h'(x)$
 
 Se $\displaystyle\int{f[g(x)] \cdot g'(x)dx}$, faça $u = g(x)$ e $u' = g'(x)$ e
 assim, teremos: $\displaystyle\int{f[g(x)] \cdot g'(x)dx} =
-	\displaystyle\int{f(u)du} = F(u) + c$
+	\displaystyle\int{f(u)du} = F(u) + c$\\[2mm]
+\textbf{Exemplo:} Calcule $\displaystyle\int{xcos(x^2)dx}$.\\[2mm]
+Fazendo $u = x^2$, então $du = 2xdx \Rightarrow
+	\displaystyle\frac{du}{2} = xdx$.
+Substituindo, temos: $\displaystyle\int{cos(u)\frac{du}{2}} =
+	\frac{1}{2}\int{cos(u)du}$.
+Como sabemos, $\displaystyle\int{cos(u)du} = sen(u) + C$. E, portanto,
+$\displaystyle\frac{1}{2}\int{cos(u)du} = \frac{1}{2}sen(u) + C$. Mas como
+tínhamos feito $u = x^2$, precisamos voltar à variável anterior. Assim, temos
+que: $\displaystyle\int{xcos(x^2)dx} = \frac{1}{2}sen(x^2) + C$.
 
 \subsection{Integração por partes}
 

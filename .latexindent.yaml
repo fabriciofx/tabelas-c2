@@ -618,7 +618,7 @@ fineTuning:
   ifElseFi:
     name: (?!@?if[a-zA-Z@]*?\{)@?if[a-zA-Z@]*?
   commands:
-    name: [+a-zA-Z@\*0-9_\:]+?
+    name: '[+a-zA-Z@\*0-9_\:]+?'
   items:
     canBeFollowedBy: (?:\[[^]]*?\])|(?:<[^>]*?>)
   keyEqualsValuesBracesBrackets:

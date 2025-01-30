@@ -24,6 +24,7 @@ RM = rm -f
 BUILD = pdflatex
 BIB = bibtex
 LINT = lacheck
+LATEXINDENT = latexindent
 BUILD_OPTS := -file-line-error -halt-on-error -interaction=nonstopmode -recorder
 
 .PHONY: all build lint clean show
@@ -36,5 +37,9 @@ build: tabelas.tex
 lint:
 	$(LINT) tabelas.tex
 
+format:
+	$(LATEXINDENT) -s -w tabelas.tex
+
 clean:
-	$(RM) *.iml .DS_Store *.aux *.log *.bcf *.bbl *.fdb_latexmk *.fls *.run.xml *.blg *.synctex.gz tabelas.pdf
+	$(RM) *.iml .DS_Store *.aux *.log *.bcf *.bbl *.fdb_latexmk *.fls \
+		*.run.xml *.blg *.synctex.gz *.bak? tabelas.pdf

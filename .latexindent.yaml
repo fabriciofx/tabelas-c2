@@ -574,33 +574,33 @@ modifyLineBreaks:
     CommandStartsOnOwnLine: 0
     CommandNameFinishesWithLineBreak: 0
   optionalArguments:
-    LSqBStartsOnOwnLine: 0              # -1,0,1,2,3,4
-    OptArgBodyStartsOnOwnLine: 0        # -1,0,1,2,3,4
-    RSqBStartsOnOwnLine: 0              # -1,0,1,2,3,4
-    RSqBFinishesWithLineBreak: 0        # -1,0,1,2,3,4
+    LSqBStartsOnOwnLine: 0                                # -1,0,1,2,3,4
+    OptArgBodyStartsOnOwnLine: 0                          # -1,0,1,2,3,4
+    RSqBStartsOnOwnLine: 0                                # -1,0,1,2,3,4
+    RSqBFinishesWithLineBreak: 0                          # -1,0,1,2,3,4
   mandatoryArguments:
-    LCuBStartsOnOwnLine: 0              # -1,0,1,2,3,4
-    MandArgBodyStartsOnOwnLine: 0       # -1,0,1,2,3,4
-    RCuBStartsOnOwnLine: 0              # -1,0,1,2,3,4
-    RCuBFinishesWithLineBreak: 0        # -1,0,1,2,3,4
+    LCuBStartsOnOwnLine: 0                                # -1,0,1,2,3,4
+    MandArgBodyStartsOnOwnLine: 0                         # -1,0,1,2,3,4
+    RCuBStartsOnOwnLine: 0                                # -1,0,1,2,3,4
+    RCuBFinishesWithLineBreak: 0                          # -1,0,1,2,3,4
   keyEqualsValuesBracesBrackets:
-    KeyStartsOnOwnLine: 0               # -1,0,1,2,3,4
-    EqualsStartsOnOwnLine: 0            # -1,0,1,2,3,4
-    EqualsFinishesWithLineBreak: 0      # -1,0,1,2,3,4
+    KeyStartsOnOwnLine: 0                                 # -1,0,1,2,3,4
+    EqualsStartsOnOwnLine: 0                              # -1,0,1,2,3,4
+    EqualsFinishesWithLineBreak: 0                        # -1,0,1,2,3,4
   items:
-    ItemStartsOnOwnLine: 0              # -1,0,1,2,3,4
-    ItemFinishesWithLineBreak: 0        # -1,0,1,2,3,4
+    ItemStartsOnOwnLine: 0                                # -1,0,1,2,3,4
+    ItemFinishesWithLineBreak: 0                          # -1,0,1,2,3,4
   namedGroupingBracesBrackets:
-    NameStartsOnOwnLine: 0              # -1,0,1,2,3,4
-    NameFinishesWithLineBreak: 0        # -1,0,1,2,3,4
+    NameStartsOnOwnLine: 0                                # -1,0,1,2,3,4
+    NameFinishesWithLineBreak: 0                          # -1,0,1,2,3,4
   specialBeginEnd:
-    SpecialBeginStartsOnOwnLine: 0      # -1,0,1,2,3,4
-    SpecialBodyStartsOnOwnLine: 0       # -1,0,1,2,3,4
-    SpecialEndStartsOnOwnLine: 0        # -1,0,1,2,3,4
-    SpecialEndFinishesWithLineBreak: 0  # -1,0,1,2,3,4
+    SpecialBeginStartsOnOwnLine: 0                        # -1,0,1,2,3,4
+    SpecialBodyStartsOnOwnLine: 0                         # -1,0,1,2,3,4
+    SpecialEndStartsOnOwnLine: 0                          # -1,0,1,2,3,4
+    SpecialEndFinishesWithLineBreak: 0                    # -1,0,1,2,3,4
   verbatim:
-    VerbatimBeginStartsOnOwnLine: 0     # -1,0,1,2,3,4
-    VerbatimEndFinishesWithLineBreak: 0 # -1,0,1,2,3,4
+    VerbatimBeginStartsOnOwnLine: 0                       # -1,0,1,2,3,4
+    VerbatimEndFinishesWithLineBreak: 0                   # -1,0,1,2,3,4
 
 # replacements, only active when either -r or -rr switches are active
 replacements:
@@ -614,7 +614,7 @@ replacements:
 # is central to latexindent.pl
 fineTuning:
   environments:
-    name: [a-zA-Z@\*0-9_\\]+
+    name: '[a-zA-Z@\*0-9_\\]+'
   ifElseFi:
     name: (?!@?if[a-zA-Z@]*?\{)@?if[a-zA-Z@]*?
   commands:

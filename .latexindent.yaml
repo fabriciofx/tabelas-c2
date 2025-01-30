@@ -1,43 +1,25 @@
+# The MIT License (MIT)
 #
-# latexindent.pl, version 3.23.6, 2024-01-17
+# Copyright (C) 2025 Fabrício Barros Cabral
 #
-# defaultSettings.yaml, the default settings for latexindent.pl
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
 #
-# a script that aims to beautify .tex, .sty, .cls files
+# The above copyright notice and this permission notice shall be included
+# in all copies or substantial portions of the Software.
 #
-# (or latexindent.exe if you're on Windows)
-#
-#---------------------------------------------------------------------------------------
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# See http://www.gnu.org/licenses/.
-#
-# Chris Hughes, 2017
-#
-# For all communication, please visit: https://github.com/cmhughes/latexindent.pl
-#
-#---------------------------------------------------------------------------------------
-# You should feel encouraged to change anything you like in these settings, but
-# it would probably be better to have your own user settings
-# files somewhere else - remember that this file may be overwritten
-# when you update your tex distribution. Please see the manual linked from:
-#
-#       https://github.com/cmhughes/latexindent.pl
-#
-# for details of how to create and configure your own settings files.
-#
-# Please read the manual (linked from above) first to understand what each switch does.
-#
-#---------------------------------------------------------------------------------------
-
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+---
 # latexindent can be called to act on a file without using the file's extension,
 # e.g, simply
 #       latexindent myfile
@@ -154,7 +136,8 @@ removeTrailingWhitespace:
   beforeProcessing: 0
   afterProcessing: 1
 
-# name of code blocks that should have their body aligned at ampersand delimiters
+# name of code blocks that should have their body aligned at ampersand
+# delimiters
 lookForAlignDelims:
   tabular:
     delims: 1
@@ -556,7 +539,9 @@ modifyLineBreaks:
       other: \\begin\{|\\\[|\\end\{     # regex
     huge: overflow                      # forbid mid-word line breaks
     separator: ""
-  # poly-switches below here              # -1: remove, 0: off, 1: add, 2: comment+add, 3: add blank line, 4: add blank line
+  # poly-switches below here              # -1: remove, 0: off, 1: add,
+  #                                          2: comment+add, 3: add blank line,
+  #                                          4: add blank line
   environments:
     BeginStartsOnOwnLine: 0             # -1,0,1,2,3,4
     BodyStartsOnOwnLine: 0              # -1,0,1,2,3,4
@@ -656,7 +641,7 @@ fineTuning:
     betterFullStop: |-
       (?x)                                # ignore spaces in the below
       (?:                                 #
-        \.\)                              # .) 
+        \.\)                              # .)
         (?!\h*[a-z])                      # not *followed by* a-z
       )                                   #
       |                                   # OR
@@ -669,10 +654,11 @@ fineTuning:
             |                             #
             (?:etc)                       # etc
             |                             #
-            (?:[wW]\.[rR]\.[tT])          # w.r.t OR W.r.t OR w.R.t OR w.r.T OR W.R.t OR W.r.T OR w.R.T OR W.R.T
+            (?:[wW]\.[rR]\.[tT])          # w.r.t OR W.r.t OR w.R.t OR w.r.T OR
+                                          # W.R.t OR W.r.T OR w.R.T OR W.R.T
           )                               #
         )                                 #
-      )                                   # 
+      )                                   #
       \.                                  # .
       (?!                                 # not *followed by*
         (?:                               #

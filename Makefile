@@ -42,4 +42,4 @@ format:
 
 clean:
 	$(RM) *.iml .DS_Store *.aux *.log *.bcf *.bbl *.fdb_latexmk *.fls \
-		*.run.xml *.blg *.synctex.gz *.bak? tabelas.pdf
+		*.run.xml *.blg *.synctex.gz *.bak* tabelas.pdf

@@ -63,44 +63,44 @@
 % Configura o cabeçalho
 % Limpa todos os campos do cabeçalho
 \fancyhead{}
- % Configura o campo right para o texto
+% Configura o campo right para o texto
 \fancyhead[R]{\textbf{Fabrício Barros Cabral}}
 
 \section{TABELA DE DERIVADAS E INTEGRAIS}
 
 \begin{table}[htb]
-    \centering
-    \begin{adjustbox}{width=1.0\textwidth}
-        \begin{tblr}{%
-            colspec=|l|l|l|l|,
-            row{1}={font=\bfseries},
-            row{even}={gray9},
-            cell{2-Z}{1} = {cmd=\inteval{\value{rownum}-1)}}
-        }
-        \hline
-        No & Função & Derivada & Integral Indefinida \\ \hline
-        & \textit{$f(x) = k$} & \textit{$f'(x) = 0$} & $\displaystyle\int{kdx} = k\int{dx} = kx + C$ \\ \hline
-        & \textit{$f(x) = x$} & \textit{$f'(x) = 1$} & $\displaystyle\int{xdx} = \frac{x^2}{2} + C$ \\ \hline
-        & \textit{$f(x) = ax$} & \textit{$f'(x) = a$} & $\displaystyle\int{axdx} = a\int{xdx} = a \cdot \frac{x^2}{2} + C$ \\ \hline
-        & \textit{f(x) = $x^n$} & \textit{$f'(x) = n \cdot x^{n - 1}$} & $\displaystyle\int{x^ndx} = \frac{x^{n+1}}{n + 1} + C, n \neq -1$ \\ \hline
-        & \textit{f(x) = $\frac{1}{x}$} & \textit{$f'(x) = x^{-1} = -1 \cdot x^{-2} = -\frac{1}{x^2}$} & $\displaystyle\int{\frac{1}{x}dx} = ln\left|x\right| + C$ \\ \hline
-        & \textit{f(x) = $ln(x)$} & \textit{$f'(x) = \displaystyle\frac{1}{x}$} & $\displaystyle\int{ln(x)dx} = x(ln\left|x\right| - 1) + C$ \\ \hline
-        & \textit{f(x) = $log_a\ x$} & \textit{$f'(x) = \displaystyle\frac{1}{x \cdot ln(a)}$} & $\displaystyle\int{log_a\ xdx} = \frac{1}{ln(a)}\int{ln(x)dx} = \frac{x}{ln(a)}(ln\left|x\right| - 1) +C$ \\ \hline
-        & \textit{f(x) = $a^x$} & \textit{$f'(x) = a^x \cdot ln(a)$} & $\displaystyle\int{a^xdx} = \frac{a^x}{ln(a)} + C$ \\ \hline
-        & \textit{$f(x) = {\rm e}^x$} & \textit{$f'(x) = {\rm e}^x$} & $\displaystyle\int{{\rm e}^xdx} = {\rm e}^x + C$ \\ \hline
-        & \textit{$f(x) = sen(x)$} & \textit{$f'(x) = cos(x)$} & $\displaystyle\int{sen(x)dx} = -cos(x) + C$ \\ \hline
-        & \textit{$f(x) = cos(x)$} & \textit{$f'(x) = -sen(x)$} & $\displaystyle\int{cos(x)dx} = sen(x) + C$ \\ \hline
-        & \textit{$f(x) = tg(x)$} & \textit{$f'(x) = sec^2(x)$} & $\displaystyle\int{tg(x)dx} = \int{\frac{sen(x)}{cos(x)}dx} = -ln \left|cos(x)\right| + C = ln \left|sec(x)\right| + C$ \\ \hline
-        & \textit{$f(x) = cotg(x)$} & \textit{$f'(x) = -cossec^2(x)$} & $\displaystyle\int{cotg(x)dx} = ln \left|sen(x)\right| + C$ \\ \hline
-        & \textit{$f(x) = sec(x)$} & \textit{$f'(x) = tg(x) \cdot sec(x)$} & $\displaystyle\int{sec(x)dx} = ln \left|sec(x) + tg(x)\right| + C$ \\ \hline
-        & \textit{$f(x) = cossec(x)$} & \textit{$f'(x) = -cotg(x) \cdot cossec(x)$} & $\displaystyle\int{cossec(x)dx} = -ln \left|cossec(x) + cotg(x)\right| + C = ln \left|cossec(x) - cotg(x)\right| + C$ \\ \hline
-        & \textit{$f(x) = arctg(x)$} & \textit{$f'(x) = \displaystyle\frac{1}{1 + x^2}$} & $\displaystyle\int{arctg(x)dx} = x \cdot arctg(x) -\frac{1}{2}ln(1 + x^2) + C$ \\ \hline
-        & \textit{$f(x) = arcsen(x)$} & \textit{$f'(x) = \displaystyle\frac{1}{\sqrt{1 - x^2}}$} & $\displaystyle\int{arcsen(x)dx} = x \cdot arcsen(x) + \sqrt{1 - x^2} + C$ \\ \hline
-        & \textit{$f(x) = arccos(x)$} & \textit{$f'(x) = \displaystyle - \frac{1}{\sqrt{1 - x^2}}$} & $\displaystyle\int{arccos(x)dx} = x \cdot arccos(x) + \sqrt{1 - x^2} + C$ \\ \hline
-        & \textit{$f(x) = ln(x + \sqrt{x^2 + 1})$} & \textit{$f'(x) = \displaystyle \frac{1}{\sqrt{1 + x^2}}$} & $\displaystyle\int{ln(x + \sqrt{x^2 + 1})dx} = x \cdot ln(x + \sqrt{x^2 + 1}) - x + C$ \\ \hline
-        & \textit{$f(x) = \displaystyle\frac{1}{2} \cdot ln\left|\frac{1 + x}{1 - x}\right|$} & \textit{$f'(x) = \displaystyle\frac{1}{1 - x^2}$} & $\displaystyle\int{\frac{1}{2}ln\left|\frac{1 + x}{1 - x}\right|dx} = \frac{1}{2}(x + 1)ln\left|1 + x\right| -\frac{1}{2}(x - 1)ln\left|1 - x\right| - x + C$ \\ \hline
-        \end{tblr}
-    \end{adjustbox}
+	\centering
+	\begin{adjustbox}{width=1.0\textwidth}
+		\begin{tblr}{%
+				colspec=|l|l|l|l|,
+				row{1}={font=\bfseries},
+				row{even}={gray9},
+				cell{2-Z}{1} = {cmd=\inteval{\value{rownum}-1)}}
+			}
+			\hline
+			No & Função                                                                              & Derivada                                                     & Integral Indefinida                                                                                                                                           \\ \hline
+			   & \textit{$f(x) = k$}                                                                 & \textit{$f'(x) = 0$}                                         & $\displaystyle\int{kdx} = k\int{dx} = kx + C$                                                                                                                 \\ \hline
+			   & \textit{$f(x) = x$}                                                                 & \textit{$f'(x) = 1$}                                         & $\displaystyle\int{xdx} = \frac{x^2}{2} + C$                                                                                                                  \\ \hline
+			   & \textit{$f(x) = ax$}                                                                & \textit{$f'(x) = a$}                                         & $\displaystyle\int{axdx} = a\int{xdx} = a \cdot \frac{x^2}{2} + C$                                                                                            \\ \hline
+			   & \textit{f(x) = $x^n$}                                                               & \textit{$f'(x) = n \cdot x^{n - 1}$}                         & $\displaystyle\int{x^ndx} = \frac{x^{n+1}}{n + 1} + C, n \neq -1$                                                                                             \\ \hline
+			   & \textit{f(x) = $\frac{1}{x}$}                                                       & \textit{$f'(x) = x^{-1} = -1 \cdot x^{-2} = -\frac{1}{x^2}$} & $\displaystyle\int{\frac{1}{x}dx} = ln\left|x\right| + C$                                                                                                     \\ \hline
+			   & \textit{f(x) = $ln(x)$}                                                             & \textit{$f'(x) = \displaystyle\frac{1}{x}$}                  & $\displaystyle\int{ln(x)dx} = x(ln\left|x\right| - 1) + C$                                                                                                    \\ \hline
+			   & \textit{f(x) = $log_a\ x$}                                                          & \textit{$f'(x) = \displaystyle\frac{1}{x \cdot ln(a)}$}      & $\displaystyle\int{log_a\ xdx} = \frac{1}{ln(a)}\int{ln(x)dx} = \frac{x}{ln(a)}(ln\left|x\right| - 1) +C$                                                     \\ \hline
+			   & \textit{f(x) = $a^x$}                                                               & \textit{$f'(x) = a^x \cdot ln(a)$}                           & $\displaystyle\int{a^xdx} = \frac{a^x}{ln(a)} + C$                                                                                                            \\ \hline
+			   & \textit{$f(x) = {\rm e}^x$}                                                         & \textit{$f'(x) = {\rm e}^x$}                                 & $\displaystyle\int{{\rm e}^xdx} = {\rm e}^x + C$                                                                                                              \\ \hline
+			   & \textit{$f(x) = sen(x)$}                                                            & \textit{$f'(x) = cos(x)$}                                    & $\displaystyle\int{sen(x)dx} = -cos(x) + C$                                                                                                                   \\ \hline
+			   & \textit{$f(x) = cos(x)$}                                                            & \textit{$f'(x) = -sen(x)$}                                   & $\displaystyle\int{cos(x)dx} = sen(x) + C$                                                                                                                    \\ \hline
+			   & \textit{$f(x) = tg(x)$}                                                             & \textit{$f'(x) = sec^2(x)$}                                  & $\displaystyle\int{tg(x)dx} = \int{\frac{sen(x)}{cos(x)}dx} = -ln \left|cos(x)\right| + C = ln \left|sec(x)\right| + C$                                       \\ \hline
+			   & \textit{$f(x) = cotg(x)$}                                                           & \textit{$f'(x) = -cossec^2(x)$}                              & $\displaystyle\int{cotg(x)dx} = ln \left|sen(x)\right| + C$                                                                                                   \\ \hline
+			   & \textit{$f(x) = sec(x)$}                                                            & \textit{$f'(x) = tg(x) \cdot sec(x)$}                        & $\displaystyle\int{sec(x)dx} = ln \left|sec(x) + tg(x)\right| + C$                                                                                            \\ \hline
+			   & \textit{$f(x) = cossec(x)$}                                                         & \textit{$f'(x) = -cotg(x) \cdot cossec(x)$}                  & $\displaystyle\int{cossec(x)dx} = -ln \left|cossec(x) + cotg(x)\right| + C = ln \left|cossec(x) - cotg(x)\right| + C$                                         \\ \hline
+			   & \textit{$f(x) = arctg(x)$}                                                          & \textit{$f'(x) = \displaystyle\frac{1}{1 + x^2}$}            & $\displaystyle\int{arctg(x)dx} = x \cdot arctg(x) -\frac{1}{2}ln(1 + x^2) + C$                                                                                \\ \hline
+			   & \textit{$f(x) = arcsen(x)$}                                                         & \textit{$f'(x) = \displaystyle\frac{1}{\sqrt{1 - x^2}}$}     & $\displaystyle\int{arcsen(x)dx} = x \cdot arcsen(x) + \sqrt{1 - x^2} + C$                                                                                     \\ \hline
+			   & \textit{$f(x) = arccos(x)$}                                                         & \textit{$f'(x) = \displaystyle - \frac{1}{\sqrt{1 - x^2}}$}  & $\displaystyle\int{arccos(x)dx} = x \cdot arccos(x) + \sqrt{1 - x^2} + C$                                                                                     \\ \hline
+			   & \textit{$f(x) = ln(x + \sqrt{x^2 + 1})$}                                            & \textit{$f'(x) = \displaystyle \frac{1}{\sqrt{1 + x^2}}$}    & $\displaystyle\int{ln(x + \sqrt{x^2 + 1})dx} = x \cdot ln(x + \sqrt{x^2 + 1}) - x + C$                                                                        \\ \hline
+			   & \textit{$f(x) = \displaystyle\frac{1}{2} \cdot ln\left|\frac{1 + x}{1 - x}\right|$} & \textit{$f'(x) = \displaystyle\frac{1}{1 - x^2}$}            & $\displaystyle\int{\frac{1}{2}ln\left|\frac{1 + x}{1 - x}\right|dx} = \frac{1}{2}(x + 1)ln\left|1 + x\right| -\frac{1}{2}(x - 1)ln\left|1 - x\right| - x + C$ \\ \hline
+		\end{tblr}
+	\end{adjustbox}
 \end{table}
 
 \section{REGRAS DE DERIVAÇÃO}
@@ -122,20 +122,20 @@ Se $f(x) = g[h(x)]$, então $f'(x) = g'[h(x)] \cdot h'(x)$
 
 Se $\displaystyle\int{f[g(x)] \cdot g'(x)dx}$, faça $u = g(x)$ e $u' = g'(x)$ e
 assim, teremos: $\displaystyle\int{f[g(x)] \cdot g'(x)dx} =
-\displaystyle\int{f(u)du} = F(u) + c$
+	\displaystyle\int{f(u)du} = F(u) + c$
 
 
 \subsection{Integração por partes}
 
 $\displaystyle\int{f(x) \cdot g'(x)dx} =
-f(x) \cdot g(x) - \displaystyle\int{f'(x) \cdot g(x)dx}$ ou, simplesmente,
+	f(x) \cdot g(x) - \displaystyle\int{f'(x) \cdot g(x)dx}$ ou, simplesmente,
 $\displaystyle\int{udv} = uv - \displaystyle\int{vdu}$\\[4mm]
 \textbf{Exemplo:}\\[2mm]
 $\displaystyle\int{xsen(x)dx}$\\[2mm]
 Fazendo $u = x$, então $du = dx$. Fazendo $dv = sen(x)$, então $v = -cos(x)$.
 Assim,\\[2mm]
 $\displaystyle\int{xsen(x)dx} = x \cdot -cos(x) -
-\left(\displaystyle\int{-cos(x)dx}\right) = -xcos(x) +
-\left(\displaystyle\int{cos(x)dx}\right) = -xcos(x) + sen(x) + c$
+	\left(\displaystyle\int{-cos(x)dx}\right) = -xcos(x) +
+	\left(\displaystyle\int{cos(x)dx}\right) = -xcos(x) + sen(x) + c$
 
 \end{document}

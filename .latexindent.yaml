@@ -625,7 +625,7 @@ fineTuning:
     name: '[a-zA-Z@\*0-9_\/.:\#-]+[a-zA-Z@\*0-9_\/.\h\{\}:\#-]*?'
     follow: (?:(?<!\\)\{)|,|(?:(?<!\\)\[)
   namedGroupingBracesBrackets:
-    name: [0-9\.a-zA-Z@\*><]+?
+    name: '[0-9\.a-zA-Z@\*><]+?'
     follow: \h|\R|\{|\[|\$|\)|\(
   UnNamedGroupingBracesBrackets:
     follow: \{|\[|,|&|\)|\(|\$

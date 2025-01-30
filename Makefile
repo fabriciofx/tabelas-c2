@@ -38,7 +38,7 @@ lint:
 	$(LINT) tabelas.tex
 
 format:
-	$(LATEXINDENT) -l -m -s -w tabelas.tex
+	$(LATEXINDENT) -l -m -s -w *.tex
 
 clean:
 	$(RM) *.iml .DS_Store *.aux *.log *.bcf *.bbl *.fdb_latexmk *.fls \

@@ -54,6 +54,9 @@
 % Permite o uso de cores por nome
 \usepackage{xcolor}
 
+% Permite colocar o texto em duas ou mais colunas por página
+\usepackage{multicol}
+
 % Começo do documento
 \begin{document}
 
@@ -103,18 +106,40 @@
 	\end{adjustbox}
 \end{table}
 
-\section{REGRAS DE DERIVAÇÃO}
+\begin{multicols}{2}
+	\section{ID\@. TRIGONOMÉTRICAS}
+	\begin{center}
+		\begin{tblr}{%
+				colspec=|l|l|,
+				row{1}={font=\bfseries},
+				row{even}={gray9},
+				cell{2-Z}{1} = {cmd=\inteval{\value{rownum}-1)}}
+			}
+			\hline
+			No & Identidade                                               \\ \hline
+			   & \textit{$sen^(x) + cos^2(x) = 1$}                        \\ \hline
+			   & \textit{$1 + cotg^2(x) = cosec^2(x)$}                    \\ \hline
+			   & \textit{$tg^2(x) + 1 = sec^2(x)$}                        \\ \hline
+			   & \textit{$sen(2x) = 2sen(x)cos(x)$}                       \\ \hline
+			   & \textit{$cos(2x) = cos^2(x) - sen^2(x)$}                 \\ \hline
+			   & \textit{$sen^2(x) = \displaystyle\frac{1 - cos(2x)}{2}$} \\ \hline
+			   & \textit{$cos^2(x) = \displaystyle\frac{1 + cos(2x)}{2}$} \\ \hline
+		\end{tblr}
+	\end{center}
 
-\subsection{Regra do produto}
-Se $f(x) = g(x) \cdot h(x)$, então $f'(x) = g'(x) \cdot h(x) + g(x) \cdot
-	h'(x)$
+	\section{REGRAS DE DERIVAÇÃO}
 
-\subsection{Regra do quociente}
-Se $f(x) = \displaystyle\frac{g(x)}{h(x)}$, então $f'(x) =
-	\displaystyle\frac{g'(x) \cdot h(x) - g(x) \cdot h'(x)}{[h(x)^2]}$
+	\subsection{Regra do produto}
+	Se $f(x) = g(x) \cdot h(x)$, então $f'(x) = g'(x) \cdot h(x) + g(x) \cdot
+		h'(x)$
 
-\subsection{Regra da cadeia}
-Se $f(x) = g[h(x)]$, então $f'(x) = g'[h(x)] \cdot h'(x)$
+	\subsection{Regra do quociente}
+	Se $f(x) = \displaystyle\frac{g(x)}{h(x)}$, então $f'(x) =
+		\displaystyle\frac{g'(x) \cdot h(x) - g(x) \cdot h'(x)}{[h(x)^2]}$
+
+	\subsection{Regra da cadeia}
+	Se $f(x) = g[h(x)]$, então $f'(x) = g'[h(x)] \cdot h'(x)$
+\end{multicols}
 
 \section{REGRAS DE INTEGRAÇÃO}
 
